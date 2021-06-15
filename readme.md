@@ -1,9 +1,10 @@
 # Django-RestFul Api app
 
 ## requirements 
-* Django - pip install django
-* Django Rest FrameWork  - pip install djangorestframework
-* Django Rest Jwt - pip install djangorestframework-jwt
+### add following code snippets
+* Django - `pip install django`
+* Django Rest FrameWork  - `pip install djangorestframework`
+* Django Rest Jwt - `pip install djangorestframework-jwt`
 
 ### initial settings 
  ```
@@ -17,5 +18,17 @@
     'django.contrib.staticfiles',
     'rest_framework',
     'postings',
+```
 
+```
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ),
+}
 ```
