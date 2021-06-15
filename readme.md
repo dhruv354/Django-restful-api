@@ -6,7 +6,7 @@
 * Django Rest Jwt - pip install djangorestframework-jwt
 
 ### initial settings 
- '''
+ ```
 
  INSTALLED_APPS = [
     'django.contrib.admin',
@@ -17,6 +17,5 @@
     'django.contrib.staticfiles',
     'rest_framework',
     'postings',
-]
 
-'''
+```
