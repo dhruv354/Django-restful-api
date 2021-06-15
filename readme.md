@@ -1,12 +1,13 @@
 # Django-RestFul Api app
 
 ## requirements 
-### add following code snippets
+
 * Django - `pip install django`
 * Django Rest FrameWork  - `pip install djangorestframework`
 * Django Rest Jwt - `pip install djangorestframework-jwt`
 
 ### initial settings 
+### add following code snippets in settings.py
  ```
 
  INSTALLED_APPS = [
