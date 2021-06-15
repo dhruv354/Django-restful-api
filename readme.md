@@ -9,3 +9,7 @@
 ### My apps
 * api_basic
     - Article model
+
+**Serializers**
+* to package and unpackage api data to and from the server so that it can  be understood by other technologies
+
