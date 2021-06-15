@@ -8,11 +8,12 @@
 
 ### My apps
 * api_basic
-    * models.py
-        - Article model
-    * Serializer.py
-        - Article serializer
+    
 
 **Serializers**
-* to package and unpackage api data to and from the server so that it can  be understood by other technologies
+* to package and unpackage api data to and from the server so that it can  be understood by other technologies and it is very customizable
+* whereas for data where we dont need to alter and play with fields much its better to use ModelSerializer
+
+**ModelSerializer**
+* 
 

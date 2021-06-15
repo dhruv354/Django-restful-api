@@ -2,6 +2,10 @@ from .models import Article
 from rest_framework import serializers
 from django.db import models
 
+'''
+Though Serializer is very customizable but it is very long code for a simple application
+so we will be using modelSerializer
+
 class ArticleSerializer(serializers.Serializer):
     title = serializers.CharField(max_length=35)
     author = serializers.CharField(max_length=35)
@@ -20,3 +24,10 @@ class ArticleSerializer(serializers.Serializer):
         instance.date = validated_data.get('date', instance.date)
         instance.save()
         return instance
+    
+'''
+
+class ArticleSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Article
+        fields = ['id', 'title', 'author']
