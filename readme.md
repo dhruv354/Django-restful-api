@@ -15,5 +15,6 @@
 * whereas for data where we dont need to alter and play with fields much its better to use ModelSerializer
 
 **ModelSerializer**
-* 
+* very easy to use and better option for smaller applications
+
 
