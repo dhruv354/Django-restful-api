@@ -1,6 +1,7 @@
 import json
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
+from rest_framework.mixins import ListModelMixin
 from .models import Article
 from .serializers import ArticleSerializer
 from rest_framework.parsers import JSONParser
@@ -9,9 +10,13 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.views import APIView
+from rest_framework import generics
 # Create your views here.
 
 
+class GenericApiView(generics.ListCreateAPIView):
+    serializer_class = ArticleSerializer
+    queryset = Article.objects.all()
 
 class article_api_view(APIView):
     def get(self, request):
